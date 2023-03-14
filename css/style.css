@@ -1,13 +1,13 @@
 @font-face {
     font-family: "Open sans";
-    src: url(fonts/OpenSans-Bold.woff);
+    src: url(../fonts/OpenSans-Bold.woff);
     font-weight: 700;
     font-style: bold;
 }
 
 @font-face {
     font-family: "Open sans";
-    src: url(fonts/OpenSans-Regular.woff);
+    src: url(../fonts/OpenSans-Regular.woff);
     font-weight: 400;
     font-style: regular;
 }
@@ -20,7 +20,7 @@
 }
 
 body {
-    font-family: "Open sans";
+    font-family: "Open sans", "sans-serif;";
     line-height: 1;
     color: #ffffff;
     margin: 0;
@@ -133,10 +133,10 @@ h1 {
 
 }
 
-.trend1,
-.trend2,
-.trend3,
-.trend4 {
+.trend_now,
+.trend_cheese,
+.trend_hike,
+.trend_lemon {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #28393c;
@@ -146,26 +146,26 @@ h1 {
     align-items: flex-end;
 }
 
-.trend1 {
+.trend_now {
     background-image: url("../images/trend1.jpg");
 }
 
-.trend2 {
+.trend_cheese {
     background-image: url("../images/trend2.jpg");
 }
 
-.trend3 {
+.trend_hike {
     background-image: url("../images/trend3.jpg");
 }
 
-.trend4 {
+.trend_lemon {
     background-image: url("../images/trend4.jpg");
 }
 
-.trend1:before,
-.trend2:before,
-.trend3:before,
-.trend4:before {
+.trend_now:before,
+.trend_cheese:before,
+.trend_hike:before,
+.trend_lemon:before {
     content: '';
     width: 24.82%;
     height: 320px;
@@ -177,6 +177,7 @@ h1 {
 h2 {
     font-size: 20px;
     font-weight: 700;
+    line-height: 21px;
 }
 
 .trend_content {
@@ -278,7 +279,7 @@ h2 {
 
 p {
     margin-top: 0.8em;
-    line-height: 22px;
+    line-height: 21px;
 }
 
 .content_text {
