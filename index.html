@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MQ-diplom</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/mobile.css">
 </head>
 
 <body>
@@ -13,7 +14,10 @@
         <div class="container">
             <div class="conteiner_top">
                 <a href="#0"> <img class="logo" src="svg/noemi-logo.svg" alt="Логотип Ноэми"> </a>
-                <nav class="menu">
+                <nav class="menu js-menu">
+                    <button class="menu_button">
+                        <span class="menu_button_label">открыть меню</span>
+                    </button>
                     <ul class="menu_list">
                         <li class="menu_list_item"><a href="#0">главная</a></li>
                         <li class="menu_list_item"><a href="#0">посты</a></li>
@@ -24,7 +28,7 @@
                     </ul>
                 </nav>
             </div>
-            <h1 class="banner">блог о творчестве, спорте, и образе жизни</h1>
+            <h1 class="banner">блог о творчестве, спорте, и&nbsp;образе жизни</h1>
         </div>
     </header>
     <section class="now_trends">
@@ -32,38 +36,38 @@
         <div class="container_trends">
             <article class="trend_garden">
                 <div class="trend_content">
-                    <ul class="tags_list">
+                    <ul class="tags_list_trends">
                         <li class="tags_list_item"><a href="#0">lifestyle</a></li>
                         <li class="tags_list_item"><a href="#0">interior</a></li>
                     </ul>
-                    <h2>сейчас в тренде: сад<br> на подоконнике</h2>
+                    <h2 class="trends_link"><a href="#0">сейчас в тренде: сад на&nbsp;подоконнике</a></h2>
                 </div>
             </article>
             <article class="trend_cheese">
                 <div class="trend_content">
-                    <ul class="tags_list">
+                    <ul class="tags_list_trends">
                         <li class="tags_list_item"><a href="#0">food</a></li>
                     </ul>
-                    <h2>сыры на красивых картинках из интернета:
-                        какие они на вкус?</h2>
+                    <h2 class="trends_link"><a href="#0">сыры на красивых картинках из интернета:
+                            какие они на вкус?</a></h2>
                 </div>
             </article>
             <article class="trend_hike">
                 <div class="trend_content">
-                    <ul class="tags_list">
+                    <ul class="tags_list_trends">
                         <li class="tags_list_item"><a href="#0">lifestyle</a></li>
                         <li class="tags_list_item"><a href="#0">travel</a></li>
                     </ul>
-                    <h2>собираемся в первый поход в горы</h2>
+                    <h2 class="trends_link"><a href="#0">собираемся в первый поход в&nbsp;горы</a></h2>
                 </div>
             </article>
             <article class="trend_lemon">
                 <div class="trend_content">
-                    <ul class="tags_list">
+                    <ul class="tags_list_trends">
                         <li class="tags_list_item"><a href="#0">food</a></li>
                         <li class="tags_list_item"><a href="#0">health</a></li>
                     </ul>
-                    <h2>сейчас в тренде: сколько витамина с в лимонах?</h2>
+                    <h2 class="trends_link"><a href="#0">сейчас в тренде: сколько витамина с в лимонах?</a></h2>
                 </div>
             </article>
         </div>
@@ -109,12 +113,12 @@
                     <ul class="tags_list">
                         <li class="tags_list_item"><a href="#0">music</a></li>
                     </ul>
-                    <h2 class="content_header"> <a href="#0">Лучшие музыкальные фестивали этого лета</a></h2>
+                    <h2 class="content_header content_header_size"> <a href="#0">Лучшие музыкальные фестивали этого лета</a></h2>
                     <div class="date"><time class="card-date" datetime="2019-06-10"> 10 июня 2019</time>
                         <span class="signature">Неизвестный автор</span></div>
                     <div class="content_text">
                         <p>Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?</p>
-                        <p>Мы составили список лучших летних фестивалей по всему миру.</p>
+                        <p class="p_list">Мы составили список лучших летних фестивалей по всему миру.</p>
                     </div>
                 </div>
             </article>
@@ -144,7 +148,7 @@
                     <h2 class="content_header"> <a href="#0">Делаем модные принты на подушках для интерьера </a></h2>
                     <div class="date"><time class="card-date" datetime="2019-06-10"> 10 июня 2019</time>
                         <span class="signature">Неизвестный автор</span></div>
-                    <div class="content_text">
+                    <div class="content_text content_text_size">
                         <p>Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</p>
                     </div>
                 </div>
@@ -188,13 +192,13 @@
                         <h3 class="card"><a href="#0">лучшие прически для распущенных волос</a></h3>
                     </div>
                 </article>
-                <section class="form">
+                <form class="form">
                     <label class="form-search">
                         <span class="search_hidden"> Введите интересующую Вас тему</span>
                         <input class="posts_search" type="search" placeholder="Найти..." required>
                     </label>
                     <button class="posts_button" type="submit"></button>
-                </section>
+                </form>
             </section>
             <section class="subscription">
                 <h3 class="subscription_title">рассылка</h3>
@@ -208,27 +212,27 @@
             </section>
             <section class="tags">
                 <h3 class="tag_title">теги</h3>
-                    <ul class="tag_btn_list">
-                        <li><a class="tag_btn" href="#0">fashion</a></li>
-                        <li><a class="tag_btn" href="#0">music</a></li>
-                        <li><a class="tag_btn" href="#0">lifestyle</a></li>
-                        <li><a class="tag_btn" href="#0">art</a></li>
-                        <li><a class="tag_btn" href="#0">interior</a></li>
-                        <li><a class="tag_btn" href="#0">travel</a></li>
-                        <li><a class="tag_btn" href="#0">food</a></li>
-                        <li><a class="tag_btn" href="#0">health</a></li>
-                    </ul>
+                <ul class="tag_btn_list">
+                    <li><a class="tag_btn" href="#0">fashion</a></li>
+                    <li><a class="tag_btn" href="#0">music</a></li>
+                    <li><a class="tag_btn" href="#0">lifestyle</a></li>
+                    <li><a class="tag_btn" href="#0">art</a></li>
+                    <li><a class="tag_btn" href="#0">interior</a></li>
+                    <li><a class="tag_btn" href="#0">travel</a></li>
+                    <li><a class="tag_btn" href="#0">food</a></li>
+                    <li><a class="tag_btn" href="#0">health</a></li>
+                </ul>
             </section>
             <section class="themes">
                 <h3 class="themes_title">темы</h3>
-                    <ul class="themes_list">
-                        <li class="theme_list_item"><a href="#0">Красота</a><span class="theme-card-span"> 12</span></li>
-                        <li class="theme_list_item"><a href="#0">Здоровье</a><span class="theme-card-span"> 4</span></li>
-                        <li class="theme_list_item"><a href="#0">Образ жизни</a><span class="theme-card-span"> 145</span></li>
-                        <li class="theme_list_item"><a href="#0">Музыка</a><span class="theme-card-span"> 28</span></li>
-                        <li class="theme_list_item"><a href="#0">Спорт</a><span class="theme-card-span"> 62</span></li>
-                        <li class="theme_list_item"><a href="#0">Йога</a><span class="theme-card-span"> 8</span></li>
-                    </ul>
+                <ul class="themes_list">
+                    <li class="theme_list_item"><a href="#0">Красота</a><span class="theme-card-span"> 12</span></li>
+                    <li class="theme_list_item"><a href="#0">Здоровье</a><span class="theme-card-span"> 4</span></li>
+                    <li class="theme_list_item"><a href="#0">Образ жизни</a><span class="theme-card-span"> 145</span></li>
+                    <li class="theme_list_item"><a href="#0">Музыка</a><span class="theme-card-span"> 28</span></li>
+                    <li class="theme_list_item"><a href="#0">Спорт</a><span class="theme-card-span"> 62</span></li>
+                    <li class="theme_list_item"><a href="#0">Йога</a><span class="theme-card-span"> 8</span></li>
+                </ul>
             </section>
         </aside>
     </div>
@@ -236,7 +240,12 @@
         <h2 class="products_title">наши изделия</h2>
         <div class="container_products">
             <article class="product">
-                <img class="product_img" src="images/shop-item-desk1.jpg" alt="подушка на диване">
+                <picture class="product_img">
+                    <source media="(max-width: 641px)" srcset="images/shop-item-mobile1.jpg">
+                    <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/shop-item-tablet1.jpg">
+                    <source media="(min-width:1200px)" srcset="images/shop-item-desk1.jpg">
+                    <img src="images/shop-item-desk1.jpg" alt="подушка на диване">
+                </picture>
                 <div class="small_cont_prod">
                     <h2 class="product_header">подушки на диван</h2>
                     <p class="product_txt">Набор из двух подушек с модными принтами. Видео о создании <a href="#0">здесь</a>.</p>
@@ -256,7 +265,12 @@
                 </div>
             </article>
             <article class="product">
-                <img class="product_img" src="images/shop-item-desk2.jpg" alt="кукла зайчик">
+                <picture class="product_img">
+                    <source media="(max-width: 641px)" srcset="images/shop-item-mobile2.jpg">
+                    <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/shop-item-tablet2.jpg">
+                    <source media="(min-width:1200px)" srcset="images/shop-item-desk2.jpg">
+                    <img src="images/shop-item-desk2.jpg" alt="кукла зайчик">
+                </picture>
                 <div class="small_cont_prod">
                     <h2 class="product_header">кукла &laquo;зайчик&raquo;</h2>
                     <p class="product_txt">Интерьерная рукодельная кукла &laquo;Зайчик&raquo;, созданию которой посвящена <a href="#0">весенняя серия постов</a> в блоге и несколько подкастов.</p>
@@ -276,8 +290,13 @@
                 </div>
             </article>
             <article class="product">
-                <img class="product_img" src="images/shop-item-desk3.jpg" alt="">
-                <div class="small_cont_prod">
+                <picture class="product_img">
+                    <source media="(max-width: 641px)" srcset="images/shop-item-mobile3.jpg">
+                    <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/shop-item-tablet3.jpg">
+                    <source media="(min-width:1200px)" srcset="images/shop-item-desk3.jpg">
+                    <img src="images/shop-item-desk3.jpg" alt="шестиугольная рамка">
+                </picture>
+                <div class="small_cont_prod ">
                     <h2 class="product_header">шестиугольная рамка</h2>
                     <p class="product_txt">Необычная рамка для украшения дома из видео <a href="#0">&laquo;как сделать рамку из подручных средств за 30 минут&raquo;</a></p>
                     <div class="product_footer">
@@ -301,15 +320,15 @@
         <address class="social_icon_adress">
             <ul class="social_icons">
                 <li class="social_icon"> <a href="#0" class="social_link  social_link_dribble">
-                        <span class="socials-link-text">dribbble</span></a></li>
+                        <span class="socials-link-text">мы в dribbble</span></a></li>
                 <li class="social_icon"> <a href="#0" class="social_link  social_link_pinterest">
-                        <span class="socials-link-text">pinterest</span></a></li>
+                        <span class="socials-link-text">мы в pinterest</span></a></li>
                 <li class="social_icon"> <a href="#0" class="social_link  social_link_tumblr">
-                        <span class="socials-link-text">tumblr</span></a></li>
+                        <span class="socials-link-text">мы в tumblr</span></a></li>
             </ul>
         </address>
         <div class="copyright">
-            <p class="copyright-text">Copyritght&copy; 2009-2019 City Blog LLC.</p>
+            <p class="copyright-text">Copyright &copy; 2009-2019 City Blog LLC.</p>
         </div>
     </footer>
     <div class="popup_hidden">
