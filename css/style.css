@@ -115,6 +115,21 @@ a {
     background-color: #28393c;
     display: flex;
     align-items: flex-end;
+    position: relative;
+}
+
+.trend_garden:before,
+.trend_cheese:before,
+.trend_hike:before,
+.trend_lemon:before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .trend_content {
@@ -598,7 +613,7 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
 }
 
 
-}
+
 
 .popup_header::after {
     content: "";
@@ -694,7 +709,7 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
     margin-top: 13px;
 }
 
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
     .header {
         background-image: url("../images/banner-mobile.jpg");
         width: 100vw;
@@ -706,16 +721,17 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
     }
 
     .conteiner_top {
-        width: 360px;
+        width: 100vw;
         height: 45vh;
         margin-bottom: 32px;
         padding-top: 32px;
-        padding-left: 44px;
+        padding-left: 30px;
         align-items: flex-end;
+        justify-content: center;
     }
 
     .logo {
-        width: 269px;
+        width: 90%;
         position: relative;
         z-index: 2;
     }
@@ -727,6 +743,8 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
     .menu {
         display: flex;
         align-self: flex-start;
+        position: absolute;
+        right: 5%;
     }
 
     .menu_button {
@@ -739,7 +757,7 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
         text-indent: -9999px;
         cursor: pointer;
         z-index: 2;
-        right: 16px;
+
 
     }
 
@@ -775,7 +793,7 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
     }
 
     .banner {
-        width: 330px;
+        width: 90%;
         font-size: 26px;
         line-height: 36px;
         position: relative;
@@ -801,18 +819,6 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
         width: 100%;
         height: 231px;
         margin-bottom: 3px;
-    }
-
-    .trend_garden:before,
-    .trend_cheese:before,
-    .trend_hike:before,
-    .trend_lemon:before {
-        content: '';
-        width: 100%;
-        height: 231px;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
     }
 
     .trends_link {
@@ -1097,7 +1103,7 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
     }
 }
 
-@media (max-width: 640px) and (orientation: landscape) {
+@media screen and (max-width: 640px) and (orientation: landscape) {
 
     .trend_garden,
     .trend_cheese,
@@ -1113,18 +1119,11 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
         justify-content: space-between;
     }
 
-    .trend_garden:before,
-    .trend_cheese:before,
-    .trend_hike:before,
-    .trend_lemon:before {
-        content: '';
-        width: 49.7%;
 
-    }
 }
 
 /*********************************************************/
-@media (min-width:641px) and (max-width:1199px) {
+@media screen and (min-width:641px) and (max-width:1200px) {
     .header {
         background-image: url("../images/banner-bg-tablet.jpg");
         width: 100%;
@@ -1134,7 +1133,7 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
     .container {
         position: relative;
         margin: 0 auto;
-        width: 90.5vmin;
+        width: 90.5%;
         z-index: 2;
     }
 
@@ -1226,29 +1225,20 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
         background-position: center bottom;
         width: calc(50% - 3px);
         min-height: 247px;
-        position: relative;
     }
 
-    .trend_garden:before,
-    .trend_cheese:before,
-    .trend_hike:before,
-    .trend_lemon:before {
-        content: '';
-        width: 100%;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        height: 100%;
-    }
+
 
     .tags_list_trends {
         font-size: 14px;
         margin-bottom: 5px;
+        gap: 6%;
+        flex-wrap: wrap;
     }
 
     .trend_content {
-        padding: 4vmin 4vmin;
-        margin: 0 17px 14px 19px;
+        padding: 8.1% 8.1%;
+        margin: 0 4.43% 3.65% 4.95%;
     }
 
     .trends_link a {
@@ -1263,18 +1253,19 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
     .main {
         display: flex;
         flex-direction: column;
-        width: 56%;
     }
 
     .main_news {
         border-bottom: 3px solid #eeeeee;
         margin-bottom: 40px;
+        max-width: 584px;
     }
 
     .main_container {
         display: flex;
         justify-content: space-between;
-        margin: 50px 4.6% 0;
+        margin: 50px 4.6% -3px;
+        max-width: 1200px;
     }
 
     .img {
@@ -1315,6 +1306,7 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
 
     .posts {
         width: 271px;
+        margin-left: 35px;
     }
 
     .new_post_title {
@@ -1343,6 +1335,10 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
     .form {
         margin-top: 60px;
 
+    }
+
+    .posts_search {
+        width: 222px;
     }
 
     .subscription {
@@ -1411,9 +1407,10 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
     .container_products {
         display: flex;
         flex-wrap: wrap;
-        max-width: 90.5vmin;
         margin: 0 auto;
         justify-content: space-between;
+        padding-right: 37px;
+        padding-left: 35px;
 
     }
 
@@ -1482,6 +1479,7 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
         line-height: 16px;
         margin-bottom: 29px;
     }
+
     .feedback_sub {
         line-height: 16px;
         margin-bottom: 29px;
@@ -1517,7 +1515,7 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
 }
 
 
-@media (min-width:641px) and (max-width:1199px) and (orientation: landscape) {
+@media screen and (min-width:641px) and (max-width:1199px) and (orientation: landscape) {
 
     .trend_garden,
     .trend_cheese,
@@ -1534,12 +1532,12 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
     }
 
     .trend_content {
-        padding: 3vmin 1vmin;
+        padding: 3% 1%;
     }
 }
 
 
-@media (min-width:1200px) {
+@media screen and (min-width:1200px) {
     .header {
         background-image: url("../images/banner-bg.jpg");
         width: 100%;
@@ -1627,20 +1625,6 @@ input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-se
         min-height: 321px;
         flex: 1;
 
-    }
-
-    .trend_garden:before,
-    .trend_cheese:before,
-    .trend_hike:before,
-    .trend_lemon:before {
-        content: '';
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
     }
 
     .trend_content {
